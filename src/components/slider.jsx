@@ -61,13 +61,31 @@ const Slider = () => {
       });
     }
   };
+  const sliderRef1 = useRef(null);
+  const scrollLeft1 = () => {
+    if (sliderRef1.current) {
+      sliderRef1.current.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    }
+  };
+  const scrollRight1 = () => {
+    if (sliderRef1.current) {
+      sliderRef1.current.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div>
       <div className="product">
-        <button className="slider-btn left" onClick={scrollLeft}>
+        <button className="slider-btn left" onClick={scrollLeft1}>
           &#10094;
         </button>
-        <div className="slider" ref={sliderRef}>
+        <div className="slider" ref={sliderRef1}>
           <div className="product-list">
             <div className="product-sale">
               <img
@@ -118,6 +136,15 @@ const Slider = () => {
           </div>
           <div className="product-list">
             <div className="product-sale">
+              <video
+                src="https://demo-milano.myshopify.com/cdn/shop/videos/c/vp/1c125896d5bd4a2cab0b37320373b210/1c125896d5bd4a2cab0b37320373b210.HD-1080p-2.5Mbps-51137723.mp4?v=0"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="product-video"
+              />
+
               <img
                 src="https://demo-milano.myshopify.com/cdn/shop/files/preview_images/1c125896d5bd4a2cab0b37320373b210.thumbnail.0000000000.jpg?v=1752397862&width=480"
                 alt="image-sale"
@@ -350,223 +377,8 @@ const Slider = () => {
               </div>
             </div>
           </div>
-          <div className="product-list">
-            <div className="product-sale">
-              <img
-                src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                alt="image-sale"
-              />
-              <div className="overflow-icon">
-                <i>
-                  <FontAwesomeIcon icon={faHeart} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faLayerGroup} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faEye} />
-                </i>
-              </div>
-              <button className="bottom-btn">Select Option </button>
-            </div>
-            <div className="product-details">
-              <h1>high neck Jumper</h1>
-              <div>
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-              </div>
-              <p>$250.00</p>
-              <div className="circle-image">
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                  alt="image-circle"
-                />
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_5_49f2ee17-4cbe-4ed7-9abd-146d3f9ac54e.webp?v=1742481512"
-                  alt="images-circle"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="product-list">
-            <div className="product-sale">
-              <img
-                src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                alt="image-sale"
-              />
-              <div className="overflow-icon">
-                <i>
-                  <FontAwesomeIcon icon={faHeart} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faLayerGroup} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faEye} />
-                </i>
-              </div>
-              <button className="bottom-btn">Select Option </button>
-            </div>
-            <div className="product-details">
-              <h1>high neck Jumper</h1>
-              <div>
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-              </div>
-              <p>$250.00</p>
-              <div className="circle-image">
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                  alt="image-circle"
-                />
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_5_49f2ee17-4cbe-4ed7-9abd-146d3f9ac54e.webp?v=1742481512"
-                  alt="images-circle"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="product-list">
-            <div className="product-sale">
-              <img
-                src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                alt="image-sale"
-              />
-              <div className="overflow-icon">
-                <i>
-                  <FontAwesomeIcon icon={faHeart} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faLayerGroup} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faEye} />
-                </i>
-              </div>
-              <button className="bottom-btn">Select Option </button>
-            </div>
-            <div className="product-details">
-              <h1>high neck Jumper</h1>
-              <div>
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-              </div>
-              <p>$250.00</p>
-              <div className="circle-image">
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                  alt="image-circle"
-                />
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_5_49f2ee17-4cbe-4ed7-9abd-146d3f9ac54e.webp?v=1742481512"
-                  alt="images-circle"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="product-list">
-            <div className="product-sale">
-              <img
-                src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                alt="image-sale"
-              />
-              <div className="overflow-icon">
-                <i>
-                  <FontAwesomeIcon icon={faHeart} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faLayerGroup} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faEye} />
-                </i>
-              </div>
-              <button className="bottom-btn">Select Option </button>
-            </div>
-            <div className="product-details">
-              <h1>high neck Jumper</h1>
-              <div>
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-              </div>
-              <p>$250.00</p>
-              <div className="circle-image">
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                  alt="image-circle"
-                />
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_5_49f2ee17-4cbe-4ed7-9abd-146d3f9ac54e.webp?v=1742481512"
-                  alt="images-circle"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="product-list">
-            <div className="product-sale">
-              <img
-                src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                alt="image-sale"
-              />
-              <div className="overflow-icon">
-                <i>
-                  <FontAwesomeIcon icon={faHeart} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faLayerGroup} />
-                </i>
-                <i>
-                  {" "}
-                  <FontAwesomeIcon icon={faEye} />
-                </i>
-              </div>
-              <button className="bottom-btn">Select Option </button>
-            </div>
-            <div className="product-details">
-              <h1>high neck Jumper</h1>
-              <div>
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-                <FontAwesomeIcon icon={faStar} style={{ color: "red" }} />
-              </div>
-              <p>$250.00</p>
-              <div className="circle-image">
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_1_1f9a1b39-5f2d-4401-8874-9ca960a89749.webp?v=1742481512&width=360"
-                  alt="image-circle"
-                />
-                <img
-                  src="https://demo-milano.myshopify.com/cdn/shop/files/4_5_49f2ee17-4cbe-4ed7-9abd-146d3f9ac54e.webp?v=1742481512"
-                  alt="images-circle"
-                />
-              </div>
-            </div>
-          </div>
         </div>
-        <button className="slider-btn right right " onClick={scrollRight}>
+        <button className="slider-btn right" onClick={scrollRight1}>
           &#10095;
         </button>
       </div>

@@ -126,7 +126,7 @@ const Hero = () => {
         <button className="slider-btn left" onClick={scrollLeft}>
           &#10094;
         </button>
-        <div className="slider">
+        <div className="slider" ref={sliderRef}>
           <div className="product-list">
             <div className="product-sale">
               <img

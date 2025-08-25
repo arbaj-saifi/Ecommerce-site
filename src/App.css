@@ -461,8 +461,7 @@ fontawesome {
   gap: 50px;
   padding: 50px;
  position: relative;
-  /* overflow-x: auto; Enable horizontal scrolling */
-  /* scrollbar-width: none; Hide scrollbar for Firefox */
+  
 
 
   }

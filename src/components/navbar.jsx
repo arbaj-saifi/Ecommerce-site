@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
         <div className="second-div">
           <FontAwesomeIcon icon={faAngleLeft} />
-          <div className="slide">
+          <div className="slides-slow">
             <h1>coats-every friday 75% off. shop sale </h1>
             <h1>sign Up for 10% off your first order. sign UP </h1>
             <h1>Summer sale discount off 50%. Shop Sale</h1>

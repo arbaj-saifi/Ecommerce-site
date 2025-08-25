@@ -573,10 +573,10 @@ const Slider = () => {
       <div className="section7">
         <div className="hero2">
           <div className="hero-text2">
-            <h1>Popular Picks</h1>
+            <h1>Happy Customers</h1>
             <p>
-              Unmatched design—superior performance and customer satisfaction in
-              one.
+              Customers love our products and we always strive to please them
+              all.
             </p>
           </div>
         </div>

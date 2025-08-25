@@ -66,7 +66,7 @@ body{
   font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
 }
-.slide{
+.slides-slow{
   
         height: 40px;
        
@@ -80,7 +80,7 @@ body{
         z-index: -1;
         overflow: hidden;
 }
-.slide h1{
+.slides-slow h1{
   margin: 0;
         opacity: 0;
         position: absolute;
@@ -89,13 +89,13 @@ body{
         top: 10px;
         animation: slideRightToLeft 9s linear infinite;
 }
-.slide h1:nth-child(1) {
+.slides-slow h1:nth-child(1) {
         animation-delay: 0s;
       }
-      .slide h1:nth-child(2) {
+      .slides-slow h1:nth-child(2) {
         animation-delay: 3s;
       }
-      .slide h1:nth-child(3) {
+      .slides-slow h1:nth-child(3) {
         animation-delay: 6s;
       }
 
@@ -937,7 +937,7 @@ padding: 0;
   gap: 20px;
   display: flex;
   width: calc(315px * 12); /* slide width × total slides */
-  animation: marquee 30s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 .sliding-wrapper:hover .sliding-track {
@@ -998,4 +998,251 @@ padding: 0;
   align-items: center;
   justify-content: center;
   gap: 50px;
+}
+.footer{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 245, 245);
+  
+}
+.section-footer{
+  width: 97%;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+.footer-first{
+  width:55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  gap: 30px;
+  padding: 20px;
+}
+.footer-first-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-first-text  h1{
+  font-size: 0.90rem;
+  font-weight: 300;
+  color: #000;
+}
+
+.footer-first img{
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.footer-first-text .hover-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.hover-section a{
+  font-size: 0.90rem;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+.hover-section a:hover{
+  color: #fc0505;
+  text-decoration: underline;
+  text-decoration-color: #000000;
+  
+  
+}
+.section-icon-footer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.section-icon-footers-first{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.section-icon-footers-first h1{
+  font-size: 0.90rem;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+}
+.section-icon-footers-first h1:hover{
+  color: #fc0505;
+  text-decoration: underline;
+  text-decoration-color: #000000;
+}
+.footer-second{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+.footer-second h1{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+}
+.section-icon-nav{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.section-icon-nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5px;
+}
+.section-icon-nav ul li{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.section-icon-nav ul li:hover{
+  color: #fc0505;
+  text-decoration: none;
+  text-decoration-color: #000000;
+  margin-left: 10px;
+  transition: all 0.4s ease;
+
+}
+.section-btn-footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+.section-btn-footer .footer-btn{
+  width: 180px;
+  height: 50px;
+  border-radius: 30px;
+  color: #ffffff;
+  border: 1px solid #000000;
+  background-color: #000000;
+  font-size: 1rem;
+  cursor: pointer;
+ 
+}
+.section-btn-footer input{
+  width: 250px;
+  height: 50px;
+  border-radius: 30px;
+  color: #000000;
+  border: 1px solid #bebbbb;
+  background-color: #ffffff17;
+  font-size: 1rem;
+
+  padding: 20px;
+}
+.section-btn-footer input::placeholder{
+  color: #afadad;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.section-btn-footer input:focus{
+  outline: none;
+  border: 1px solid #242323;
+  background-color: #ffffff;
+}
+.section-text-p p{
+  font-size: 0.90rem;
+  font-weight: 400;
+  color: #000;
+
+}
+.section-icon-footer-social{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: flex-start;
+
+}
+.section-icon-footer-social i{
+  font-size: 1.5rem;
+  color: #000;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid #bebbbb;
+  transition: color 0.3s ease;
+  background-color: transparent;
+}
+.footer-first h2{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+}
+.footer-first-texts{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer-first-texts  h1{
+  font-size: 0.90rem;
+  font-weight: 300;
+  color: #000;
+}
+.copyRight{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color:#F5F5F5;
+}
+.copyRight h1{
+  font-size: 0.90rem;
+  font-weight: 400;
+  color: #000;
+}
+.copyRight h1 span{
+  font-weight: 600;
+  color: #660707;
+  font-size: 1rem;
+
+}
+hr{
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid #a19f9f;
+  background-color: #F5F5F5;
+  
+}
+.copyRight h1 span a{
+  text-decoration: none;
+  color: #660707;
+}
+.copyRight h1 span a:hover{
+  text-decoration: underline;
+  text-decoration-color: #000000;
+  text-underline-offset: 4px;
+  color: #3b2e2e;
 }

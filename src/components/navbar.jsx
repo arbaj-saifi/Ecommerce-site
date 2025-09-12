@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Nav from "./nav";
 import {
   faFacebook,
   faInstagram,
@@ -21,9 +22,23 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="navbar">
-      <div className="TopVar">
+      <div className={`TopVar ${scrolled ? "hide" : ""}`}>
         <div className="first-div">
           <h1>Welcome Milano store </h1>
           <div className="icons">
@@ -65,36 +80,14 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faAngleRight} />
         </div>
       </div>
-      <div className="Header">
+
+      <div className={`Header ${scrolled ? "sticky" : ""}`}>
         <img
           src="https://demo-milano.myshopify.com/cdn/shop/files/logo.png?v=1742650856"
           alt="logo"
         />
         <div className="menu">
-          <div className="home">
-            <h1>Home</h1>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </div>
-          <div className="home">
-            <h1>Shop</h1>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </div>
-          <div className="home">
-            <h1>Products</h1>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </div>
-          <div className="home">
-            <h1>Pages</h1>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </div>
-          <div className="home">
-            <h1>Blogs</h1>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </div>
-          <div className="home">
-            <h1>Buy Theme!</h1>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </div>
+          <Nav />
         </div>
         <div className="order-div">
           <FontAwesomeIcon icon={faSearch} />

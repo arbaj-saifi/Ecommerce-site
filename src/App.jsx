@@ -1,17 +1,37 @@
-import react from "react";
+// import react from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Hero from "./components/hero";
-import Slider from "./components/slider";
+
+import Home from "./pages/home";
+
+import Product from "./pages/product";
+import Shop from "./pages/Shop";
+import Pages from "./pages/pages";
+import Blog from "./pages/blog";
+import Themes from "./pages/Theme";
+import ScrollTopButton from "./components/scrolltopbutton";
 import Footer from "./components/Footer";
+
 import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Slider />
-      <Footer />
+      {/* <Navbar /> */}
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Shop" element={<Shop />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/pages" element={<Pages />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/Themes" element={<Themes />} />
+        </Routes>
+        <ScrollTopButton />
+        <Footer />
+      </Router>
     </>
   );
 }

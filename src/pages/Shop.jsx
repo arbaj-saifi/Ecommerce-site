@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {} from "@fortawesome/free-brands-svg-icons";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -21,7 +20,6 @@ import {
   faLayerGroup,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
-import Footer from "../components/Footer";
 
 // import Product from "./product";
 
@@ -664,7 +662,6 @@ const Shop = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };

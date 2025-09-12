@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./Shop.css";
+import "./shop.css";
 import {
   faAngleLeft,
   faAngleRight,

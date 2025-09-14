@@ -290,8 +290,7 @@ const Shop = () => {
 
           <h1>Shop</h1>
         </div>
-
-        <ab>Shop</ab>
+        <h2>Shop</h2>
       </div>
       <div className="swiper">
         <Swiper
@@ -461,7 +460,7 @@ const Shop = () => {
               >
                 <input type="text" placeholder="$0.00" />
                 -
-                <input type="text" value={`$${selectPrice}.00`} />
+                <input type="text" value={`$${selectPrice}.00`} readOnly />
               </div>
               <input
                 type="range"
@@ -627,6 +626,7 @@ const Shop = () => {
           <div
             style={{
               display: "flex",
+              alignItems: "center",
               justifyContent: "center",
               marginTop: "20px",
               gap: "8px",
@@ -635,6 +635,16 @@ const Shop = () => {
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
+              style={{
+                backgroundColor: "grey",
+                width: "30px",
+                height: "30px",
+                borderRadius: "50%",
+                padding: "10px",
+                display: "flex",
+                fontSize: "1.3rem",
+                alignItems: "center",
+              }}
             >
               <FontAwesomeIcon icon={faAngleRight} />
             </button>
@@ -645,6 +655,7 @@ const Shop = () => {
                 onClick={() => setCurrentPage(i + 1)}
                 style={{
                   fontWeight: currentPage === i + 1 ? "bold" : "normal",
+                  fontSize: "1.5rem",
                 }}
               >
                 {i + 1}
@@ -656,6 +667,16 @@ const Shop = () => {
                 setCurrentPage((prev) => Math.min(prev + 1, totalPage))
               }
               disabled={currentPage === totalPage}
+              style={{
+                backgroundColor: "grey",
+                width: "30px",
+                height: "30px",
+                borderRadius: "50%",
+                padding: "10px",
+                display: "flex",
+                fontSize: "1.3rem",
+                alignItems: "center",
+              }}
             >
               <FontAwesomeIcon icon={faAngleLeft} />
             </button>

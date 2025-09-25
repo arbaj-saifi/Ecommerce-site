@@ -1,0 +1,80 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.rating{
+    display: flex;
+    gap: 8px;
+}
+.right-details {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  gap: 15px;
+  position: sticky;
+  top: 50px;
+  z-index: 10;
+}
+.right-details h1{
+    font-size: 2rem;
+    font-weight: 400;
+
+}
+.right-details p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: gray;
+}
+.left-image{
+    background-color: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+
+}
+.addToCart{
+    font-size: 1.5rem;
+    color: #fff;
+    width: 300px;
+    height: 70px;
+background-color: #5cf703;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+}
+.addToCart:hover{
+    color: white;
+    background-color: black;
+    
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.747);
+}
+.delivery{
+    border: 1px solid black;
+    padding: 20px;
+}
+.delivery ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.delivery ul li{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.delivery ul li h1{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(61, 61, 61);
+}
+.delivery ul hr {
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px dashed #888686;
+  
+}

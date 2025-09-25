@@ -10,10 +10,10 @@ import Pages from "./pages/pages";
 import Blog from "./pages/blog";
 import Themes from "./pages/Theme";
 import ScrollTopButton from "./components/scrolltopbutton";
+import ProductDetails from "./pages/ProductData";
 import Footer from "./components/Footer";
 
 import "./App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Shop" element={<Shop />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/product" element={<Product />} />
           <Route path="/pages" element={<Pages />} />
           <Route path="/blog" element={<Blog />} />

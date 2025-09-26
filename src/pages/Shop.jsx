@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ProductDetails from "./ProductData";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -21,8 +20,6 @@ import {
   faLayerGroup,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
-
-// import Product from "./product";
 
 const AllImage = [
   {

@@ -1,0 +1,180 @@
+/* Overlay: background dim */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* darker like Milano */
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.cart-drawer {
+  background: #fff;
+  width: 400px;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.cart-drawer.active {
+  transform: translateX(0);
+}
+
+/* Header */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.close-btn,
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.cart-items {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.congrats-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+.congrats-line {
+  width: 0;
+  height: 3px;
+  background: #4caf50;
+  border-radius: 3px;
+  animation: slideLine 0.5s forwards;
+  margin-bottom: 5px;
+}
+
+@keyframes slideLine {
+  to {
+    width: 100px; /* final line width */
+  }
+}
+
+.congrats-text {
+  background: #4caf50;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: fadeIn 0.5s 0.5s forwards; /* fade after line animation */
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.congrats-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1001;
+}
+
+.congrats-line {
+  width: 0;
+  height: 3px;
+  background: #4caf50;
+  border-radius: 3px;
+  animation: slideLine 0.5s forwards;
+  margin-bottom: 5px;
+}
+
+@keyframes slideLine {
+  to {
+    width: 120px; /* like Milano */
+  }
+}
+
+.congrats-text {
+  background: #4caf50;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 0.5s 0.5s forwards; /* after line */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.line-wrapper {
+  position: relative;
+  height: 4px;
+  background: #eee;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.line {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: width 0.1s linear;
+}
+
+.line.filled {
+  background: #4caf50; /* green line */
+  left: 0;
+}
+
+.line.empty {
+  background: #000; /* black line */
+  right: 0;
+}
+

@@ -161,10 +161,10 @@ body{
   width: 100%;
   background: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   
-  text-align: center;
+  /* text-align: center; */
   transition: all 0.3s ease;
   z-index: 1000;
 }
@@ -197,7 +197,7 @@ border-bottom: 1px solid #a3a2a2;
 }
 .menu{
   display: flex;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   padding-top: 10px;
   flex-direction: row;
@@ -210,8 +210,9 @@ border-bottom: 1px solid #a3a2a2;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
+  width: 20%;
 
 }
 .Header img{

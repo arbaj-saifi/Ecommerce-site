@@ -20,9 +20,16 @@ import {
   faSign,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import ProductDetails from "../pages/ProductData";
+import CountHeart from "./CountHeart";
+import CartButton from "../pages/cartButton";
+import CartPopup from "../pages/cartPopup";
 
-const Navbar = () => {
+const Navbar = ({ cart, Heart, removeFromCart }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showMiniCart, setShowMiniCart] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -92,8 +99,63 @@ const Navbar = () => {
         <div className="order-div">
           <FontAwesomeIcon icon={faSearch} />
           <FontAwesomeIcon icon={faUser} />
-          <FontAwesomeIcon icon={faHeart} />
-          <FontAwesomeIcon icon={faShoppingBasket} />
+          {/* <CountHeart /> */}
+
+          {/* <FontAwesomeIcon icon={faHeart} /> */}
+          <div style={{ position: "relative", cursor: "pointer" }}>
+            <FontAwesomeIcon icon={faHeart} />
+
+            {/* Badge Count */}
+            {Heart > 0 && (
+              <span
+                style={{
+                  position: "absolute",
+                  top: "-8px",
+                  right: "-10px",
+                  backgroundColor: "red",
+                  color: "white",
+                  fontSize: "12px",
+                  borderRadius: "60%",
+                  padding: "2px 5px",
+                }}
+              >
+                {Heart}
+              </span>
+            )}
+          </div>
+          <div style={{ position: "relative" }}>
+            <div
+              onClick={() => setIsOpen(true)}
+              style={{ position: "relative", cursor: "pointer" }}
+            >
+              <FontAwesomeIcon icon={faShoppingBasket} />
+
+              {/* Badge Count */}
+              {cart.length > 0 && (
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "-8px",
+                    right: "-10px",
+                    backgroundColor: "red",
+                    color: "white",
+                    fontSize: "12px",
+                    borderRadius: "60%",
+                    padding: "2px 5px",
+                  }}
+                >
+                  {cart.length}
+                </span>
+              )}
+            </div>
+            {/* Mini Cart Popup */}
+            <CartPopup
+              cart={cart}
+              removeFromCart={removeFromCart}
+              isOpen={isOpen}
+              onClose={() => setIsOpen(false)}
+            />
+          </div>
         </div>
       </div>
     </div>

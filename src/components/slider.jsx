@@ -14,6 +14,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const slides = [
   {
@@ -83,7 +89,7 @@ const Slider = () => {
   return (
     <div>
       <ProductAll />
-      
+
       <div className="section7">
         <div className="hero2">
           <div className="hero-text2">
@@ -240,6 +246,120 @@ const Slider = () => {
             &#10095;
           </button>
         </div>
+        <div className="mobile-section7-slider">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            pagination={{ clickable: true }}
+            spaceBetween={20}
+            slidesPerView={1}
+          >
+            <SwiperSlide>
+              <div>
+                {[...Array(5)].map((_, i) => (
+                  <FontAwesomeIcon
+                    key={i}
+                    icon={faStar}
+                    style={{ color: "yellow" }}
+                  />
+                ))}
+              </div>
+              <h1>Cameron smith. </h1>
+              <p>
+                A perfect product, it keeps you very warm without over heating.
+                True to size, I couldn't be happier with the purchase... Thank
+                you! 🤗
+              </p>
+              <div className="section-slider-title-img">
+                <div className="section-slider-title-images">
+                  <img
+                    src="https://demo-milano.myshopify.com/cdn/shop/files/14_1_4f52feaa-9e18-462c-b05e-f508d14c8535.webp?v=1742478979&width=240"
+                    alt="images title "
+                  />
+                  <img
+                    src="https://demo-milano.myshopify.com/cdn/shop/files/14_3_f4e35f65-6d4b-49c0-b9bb-25af4d58e6fc.webp?v=1742479098&width=240"
+                    alt="images title2"
+                    className="over-image"
+                  />
+                </div>
+                <div className="section-slider-title-images-text">
+                  <h1>Waistcoat with pockets</h1>
+                  <p>$270.00 </p>
+                </div>
+                <div></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                {[...Array(5)].map((_, i) => (
+                  <FontAwesomeIcon
+                    key={i}
+                    icon={faStar}
+                    style={{ color: "yellow" }}
+                  />
+                ))}
+              </div>
+              <h1>Cameron smith. </h1>
+              <p>
+                A perfect product, it keeps you very warm without over heating.
+                True to size, I couldn't be happier with the purchase... Thank
+                you! 🤗
+              </p>
+              <div className="section-slider-title-img">
+                <div className="section-slider-title-images">
+                  <img
+                    src="https://demo-milano.myshopify.com/cdn/shop/files/14_1_4f52feaa-9e18-462c-b05e-f508d14c8535.webp?v=1742478979&width=240"
+                    alt="images title "
+                  />
+                  <img
+                    src="https://demo-milano.myshopify.com/cdn/shop/files/14_3_f4e35f65-6d4b-49c0-b9bb-25af4d58e6fc.webp?v=1742479098&width=240"
+                    alt="images title2"
+                    className="over-image"
+                  />
+                </div>
+                <div className="section-slider-title-images-text">
+                  <h1>Waistcoat with pockets</h1>
+                  <p>$270.00 </p>
+                </div>
+                <div></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                {[...Array(5)].map((_, i) => (
+                  <FontAwesomeIcon
+                    key={i}
+                    icon={faStar}
+                    style={{ color: "yellow" }}
+                  />
+                ))}
+              </div>
+              <h1>Cameron smith. </h1>
+              <p>
+                A perfect product, it keeps you very warm without over heating.
+                True to size, I couldn't be happier with the purchase... Thank
+                you! 🤗
+              </p>
+              <div className="section-slider-title-img">
+                <div className="section-slider-title-images">
+                  <img
+                    src="https://demo-milano.myshopify.com/cdn/shop/files/14_1_4f52feaa-9e18-462c-b05e-f508d14c8535.webp?v=1742478979&width=240"
+                    alt="images title "
+                  />
+                  <img
+                    src="https://demo-milano.myshopify.com/cdn/shop/files/14_3_f4e35f65-6d4b-49c0-b9bb-25af4d58e6fc.webp?v=1742479098&width=240"
+                    alt="images title2"
+                    className="over-image"
+                  />
+                </div>
+                <div className="section-slider-title-images-text">
+                  <h1>Waistcoat with pockets</h1>
+                  <p>$270.00 </p>
+                </div>
+                <div></div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
       <div className="section8">
         <div className="hero2">
@@ -268,6 +388,7 @@ const Slider = () => {
           </div>
         </div>
       </div>
+
       <div className="section9">
         <div className="hero2">
           <div className="hero-text2">
@@ -299,6 +420,51 @@ const Slider = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="mobile-section9">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          pagination={{ clickable: true }}
+          spaceBetween={20}
+          slidesPerView={1}
+        >
+          <SwiperSlide>
+            <div className="hero2">
+              <div className="hero-text2">
+                <FontAwesomeIcon icon={faBox} />
+                <h1>Free Shopping</h1>
+                <p>
+                  Enjoy free worldwide shipping and returns, with customs and
+                  duties taxes included.
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="hero2">
+              <div className="hero-text2">
+                <FontAwesomeIcon icon={faBox} />
+                <h1>Free Shopping</h1>
+                <p>
+                  Enjoy free worldwide shipping and returns, with customs and
+                  duties taxes included.
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="hero2">
+              <div className="hero-text2">
+                <FontAwesomeIcon icon={faBox} />
+                <h1>Free Shopping</h1>
+                <p>
+                  Enjoy free worldwide shipping and returns, with customs and
+                  duties taxes included.
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );

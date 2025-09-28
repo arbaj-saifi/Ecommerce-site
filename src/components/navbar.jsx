@@ -106,22 +106,22 @@ const Navbar = ({ cart, Heart, removeFromCart }) => {
             <FontAwesomeIcon icon={faHeart} />
 
             {/* Badge Count */}
-            {Heart > 0 && (
-              <span
-                style={{
-                  position: "absolute",
-                  top: "-8px",
-                  right: "-10px",
-                  backgroundColor: "red",
-                  color: "white",
-                  fontSize: "12px",
-                  borderRadius: "60%",
-                  padding: "2px 5px",
-                }}
-              >
-                {Heart}
-              </span>
-            )}
+            {/* {Heart > 0 && ( */}
+            <span
+              style={{
+                position: "absolute",
+                top: "-8px",
+                right: "-10px",
+                backgroundColor: "red",
+                color: "white",
+                fontSize: "10px",
+                borderRadius: "50%",
+                padding: "1px 4px",
+              }}
+            >
+              {Heart}
+            </span>
+            {/* )} */}
           </div>
           <div style={{ position: "relative" }}>
             <div
@@ -131,22 +131,22 @@ const Navbar = ({ cart, Heart, removeFromCart }) => {
               <FontAwesomeIcon icon={faShoppingBasket} />
 
               {/* Badge Count */}
-              {cart.length > 0 && (
-                <span
-                  style={{
-                    position: "absolute",
-                    top: "-8px",
-                    right: "-10px",
-                    backgroundColor: "red",
-                    color: "white",
-                    fontSize: "12px",
-                    borderRadius: "60%",
-                    padding: "2px 5px",
-                  }}
-                >
-                  {cart.length}
-                </span>
-              )}
+              {/* {cart.length > 0 && ( */}
+              <span
+                style={{
+                  position: "absolute",
+                  top: "-8px",
+                  right: "-10px",
+                  backgroundColor: "red",
+                  color: "white",
+                  fontSize: "10px",
+                  borderRadius: "50%",
+                  padding: "1px 4px",
+                }}
+              >
+                {cart.length}
+              </span>
+              {/* )} */}
             </div>
             {/* Mini Cart Popup */}
             <CartPopup

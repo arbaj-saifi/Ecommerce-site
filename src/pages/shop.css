@@ -256,32 +256,6 @@ hr{
     margin: 0;
     color: #1b1b1b;
 }
- /* .product-cart {
-  position: relative;
-  overflow: hidden;
-} */
-
-/* .product-media {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-} */
-
-/* .over-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 370px;
-  object-fit: cover;
-  border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-} */
-
-/* Hover effect */
-/* .product-cart:hover .over-image {
-  opacity: 1;
-} */
+ @media (max-width: 768px){
+  
+ }

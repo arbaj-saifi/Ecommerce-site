@@ -238,13 +238,12 @@ const ProductAll = () => {
       <Swiper
         modules={[Navigation, Pagination]}
         navigation
-        spaceBetween={20}
-        slidesPerView={4}
+        pagination={{ clickable: true }}
+        spaceBetween={25}
+        slidesPerView={2}
         breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
+          1024: { slidesPerView: 4 }, // Desktop
+          768: { slidesPerView: 2 }, // Tablet
         }}
         className="mySwiper"
       >

@@ -30,22 +30,7 @@ overflow: hidden;
   margin: 0;
 }
 
-/* .products-img {
-  width: 100%;
-  
-  object-fit: cover;
-  border-radius: 12px;
-  /* margin-bottom: 15px; */
-/* } */
-.product-sales img{
-  width: 100%;
-  height: 100%;
-  display: block;
-   transition: opacity 0.6s ease;
-  object-fit: cover;
-  border-radius: 12px;
-  /* margin-bottom: 15px; */
-}
+
 .over-image {
   position: absolute;
   top: 0;
@@ -61,17 +46,7 @@ overflow: hidden;
     opacity: 1; 
     border-radius: 19px;
   }
-.product-sales{
-  position: relative;
-  width: 310px;
-  height: 450px;
-  padding: 10px;
-  overflow: hidden;
-  border-radius: 12px;
-  /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); */
-  cursor: pointer;
 
-}
 .product-sales video{
   width: 100%;
   height: 100%;
@@ -80,11 +55,12 @@ overflow: hidden;
   border-radius: 12px;
 }
 
-.product-media {
+.product-media,
+.over-image {
+  height: 200px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;   /* Video/image dono ko same fit karega */
-  display: block;
+  object-fit: cover; /* image ko crop karega taaki layout bigde na */
+  border-radius: 8px; /* optional, thoda rounded effect dene ke liye */
 }
  .overflow-icons{
    position: absolute;
@@ -145,27 +121,13 @@ overflow: hidden;
     }
 
 
-.product-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #222;
-  cursor: pointer;
-}
+
 .product-title:hover {
   color: #eb2525;
  
 }
-.product-price {
-  color: #666;
-  /* margin: 8px 0; */
-  font-size: 1rem;
-}
 
-.product-price {
-  color: #666;
-  /* margin: 8px 0; */
-  font-size: 1rem;
-}
+
 
 .product-btn {
   display: block;
@@ -218,7 +180,109 @@ overflow: hidden;
 }
 
 .star.filled {
-  color: #facc15; /* golden yellow */
+  color: #facc15; 
 }
 
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000; /* arrow color */
+  background: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* ensure above images */
+}
+
+.product-sales {
+  position: relative;
+  width: 100%;
+  /* padding: 10px; */
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
+.product-sales img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.product-price {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ✅ Tablet */
+/* @media (max-width: 768px) {
+  .slider-container{
+    width: 100%;
+    height: auto;
+  }
+  .mySwiper{
+    width: 100%;
+    height: auto;
+    padding-right: 20px;
+  }
+  .product-sales img {
+    height: 180px;
+  }
+  .product-title {
+    font-size: 0.9rem;
+  }
+  .product-price {
+    font-size: 0.8rem;
+  }
+} */
+
+/* ✅ Mobile */
+@media (max-width: 768px) {
+  .slider-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .mySwiper{
+    width: 100%;
+    height: auto;
+    padding-right: 20px;
+  }
+  .product-img {
+    width: 160px;
+    height: 100px;
+  }
+.product-cart{
+  width: 100%;
+  position: relative;
+}
+  .swiper-wrapper{
+    width: 100%;
+    gap: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .product-sales{
+    width: 200px;
+    height: 300px;
+  }
+  .product-title {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */

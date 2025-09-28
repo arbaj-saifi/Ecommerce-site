@@ -83,6 +83,7 @@ const Slider = () => {
   return (
     <div>
       <ProductAll />
+      
       <div className="section7">
         <div className="hero2">
           <div className="hero-text2">

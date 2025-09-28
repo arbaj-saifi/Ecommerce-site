@@ -1,6 +1,13 @@
 import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ProductAll from "./product";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import {
   faAngleLeft,
   faAngleRight,
@@ -91,6 +98,22 @@ const Hero = () => {
           />
         </div>
       </div>
+      <div className="all-images2">
+        <div className="name-images">
+          <img
+            src="https://demo-milano.myshopify.com/cdn/shop/files/main_clt3.webp?v=1745943972&width=550"
+            alt="image1"
+          />
+          <h1>Demin</h1>
+        </div>
+        <div className="name-images">
+          <img
+            src="https://demo-milano.myshopify.com/cdn/shop/files/main_clt2.webp?v=1745943972&width=550"
+            alt="image1"
+          />
+          <h1>Blazers</h1>
+        </div>
+      </div>
       <div className="caption">
         <h1>Demin</h1>
         <h1>Blazers</h1>
@@ -113,6 +136,34 @@ const Hero = () => {
             <button>Shop Now</button>
           </div>
         </div>
+      </div>
+      <div className="mobile-hero3">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          pagination={{ clickable: true }}
+          spaceBetween={20}
+          slidesPerView={1}
+        >
+          <SwiperSlide>
+            <div className="hero3-1">
+              <div className="hero-text3">
+                <p>Save 30-50% Blazers</p>
+                <h1>Color Spotlight</h1>
+                <button>Shop Now</button>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="hero3-2">
+              <div className="hero-text3">
+                <p>Save 30-50% Blazers</p>
+                <h1>Color Spotlight</h1>
+                <button>Shop Now</button>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div className="hero2">
         <div className="hero-text2">
@@ -172,6 +223,71 @@ const Hero = () => {
             <button className="shop-now">Shop Collection</button>
           </div>
         </div>
+      </div>
+      <div className="mobile-section5">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          pagination={{ clickable: true }}
+          spaceBetween={20}
+          slidesPerView={1}
+        >
+          <SwiperSlide>
+            <div className="first-section">
+              <div className="section-image">
+                <img
+                  src="https://demo-milano.myshopify.com/cdn/shop/files/fs_new_3.webp?v=1748226426&width=550"
+                  alt="image style"
+                />
+              </div>
+              <div className="section-text">
+                <p>DAYTIME STAPLES</p>
+                <h1>Cool & Confident</h1>
+                <p>
+                  Crisp whites and sharp shades for your everyday power look.
+                </p>
+                <button className="shop-now">Shop Collection</button>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="second-section">
+              <div className="section-image">
+                <img
+                  src="https://demo-milano.myshopify.com/cdn/shop/files/fs_new_4.webp?v=1748226426&width=550"
+                  alt="image style"
+                />
+              </div>
+              <div className="section-text">
+                <p>BOLD ESSENTIALS</p>
+                <h1>Golden Layers</h1>
+                <p>
+                  Soft knits in rich tones—effortlessly stylish, endlessly
+                  wearable.
+                </p>
+                <button className="shop-now">Shop Collection</button>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="third-section">
+              <div className="section-image">
+                <img
+                  src="https://demo-milano.myshopify.com/cdn/shop/files/fs_new_5.webp?v=1748226869&width=550"
+                  alt="image style"
+                />
+              </div>
+              <div className="section-text">
+                <p>SAVE 10—30% ON STATEMENT PIECES</p>
+                <h1>Modern Ease Unfolded</h1>
+                <p>
+                  Effortless looks for every moment—from poolside to city
+                  strolls.
+                </p>
+                <button className="shop-now">Shop Collection</button>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div className="section6">
         <div className="section-text1">

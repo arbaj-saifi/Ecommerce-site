@@ -1,10 +1,13 @@
-
 .nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
+          width: 100%;
+          height: 40px;
+          gap: 15px;
+          padding: 10px;
+          font-size: 1rem;
+          font-Weight: 500;
+          align-Items: center;
+          justify-Content: center;
 }
 .nav a{
     text-decoration: none;
@@ -126,4 +129,30 @@ a:hover{
 .img-hover-shop1 button:hover{
     background-color: red;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-link{
+        width: 80%;
+        height: 200px;
+
+    }
+    .nav{
+        width: 80%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;    
+    
+    }
+    .section-icon-naB ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+    .img-hover-shop1, .img-hover-shop2{
+        width: 200px;
+        height: 220px;
+    }
 }

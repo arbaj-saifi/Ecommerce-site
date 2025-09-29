@@ -19,6 +19,7 @@ import {
   faShoppingBasket,
   faSign,
   faUser,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import ProductDetails from "../pages/ProductData";
 import CountHeart from "./CountHeart";
@@ -29,6 +30,7 @@ const Navbar = ({ cart, Heart, removeFromCart }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showMiniCart, setShowMiniCart] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,7 +101,7 @@ const Navbar = ({ cart, Heart, removeFromCart }) => {
         <div className="order-div">
           <FontAwesomeIcon icon={faSearch} />
           <FontAwesomeIcon icon={faUser} />
-          {/* <CountHeart /> */}
+          <div style={{ position: "relative", cursor: "pointer" }}></div>
 
           {/* <FontAwesomeIcon icon={faHeart} /> */}
           <div style={{ position: "relative", cursor: "pointer" }}>
@@ -157,6 +159,50 @@ const Navbar = ({ cart, Heart, removeFromCart }) => {
             />
           </div>
         </div>
+      </div>
+
+      <div className={`mobile-header ${scrolled ? "sticky" : ""}`}>
+        {/* Hamburger Menu */}
+        <div className="mobile-menu-icon" onClick={() => setMenu(!menu)}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+
+        {/* Logo */}
+        <img
+          src="https://demo-milano.myshopify.com/cdn/shop/files/logo.png?v=1742650856"
+          alt="logo"
+          className="logo"
+        />
+
+        {/* Wishlist */}
+        <div className="icon-wrapper">
+          <FontAwesomeIcon icon={faHeart} />
+          {Heart > 0 && <span className="badge">{Heart}</span>}
+        </div>
+
+        {/* Cart */}
+        <div className="icon-wrapper">
+          <div onClick={() => setShowMiniCart(!showMiniCart)}>
+            <FontAwesomeIcon icon={faShoppingBasket} />
+            {cart.length > 0 && <span className="badge">{cart.length}</span>}
+          </div>
+
+          {showMiniCart && (
+            <CartPopup
+              cart={cart}
+              removeFromCart={removeFromCart}
+              isOpen={showMiniCart}
+              onClose={() => setShowMiniCart(false)}
+            />
+          )}
+        </div>
+
+        {/* Mobile Nav */}
+        {menu && (
+          <div className="mobile-nav">
+            <Nav />
+          </div>
+        )}
       </div>
     </div>
   );

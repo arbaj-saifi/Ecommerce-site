@@ -8,20 +8,7 @@ const Nav = () => {
   const [isOvered, setIsOvered] = useState(null);
   return (
     <div className="nav-link">
-      <nav
-        style={{
-          display: "flex",
-          width: "100%",
-          height: "40px",
-          gap: "15px",
-          padding: "10px",
-          fontSize: "1rem",
-          fontWeight: "500",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-        className="nav"
-      >
+      <nav className="nav">
         {" "}
         <div
           style={{ position: "relative" }}
